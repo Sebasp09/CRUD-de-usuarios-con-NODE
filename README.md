@@ -1,12 +1,10 @@
-# CRUD Usuarios con Node.js
+# API CRUD de Usuarios con Node.js (sin frameworks)
 
 Aplicación CRUD desarrollada con Node.js nativo utilizando el módulo HTTP, sin frameworks externos como Express.
 
 ## Descripción
 
-Este proyecto permite gestionar usuarios mediante operaciones CRUD básicas. Los datos se almacenan en un archivo JSON y son consumidos desde una interfaz web desarrollada con HTML, CSS y JavaScript.
-
-El objetivo del proyecto fue comprender el funcionamiento interno de las peticiones HTTP en Node.js, el manejo de archivos con `fs` y la comunicación entre frontend y backend sin utilizar frameworks.
+Este proyecto implementa una API CRUD de usuarios utilizando Node.js nativo, sin frameworks como Express. Se construye un servidor HTTP manual para comprender el manejo de rutas, requests y persistencia de datos mediante archivos JSON.
 
 ## Funcionalidades
 
@@ -62,8 +60,18 @@ Body:
 ### Eliminar usuario
 
 ```http
-DELETE /usuarios/:id
+DELETE /usuarios/:id (manejo manual de rutas en Node.js nativo)
 ```
+## Ejemplo de uso
+
+Crear usuario:
+
+POST /usuarios
+Content-Type: application/json
+
+{
+  "nombre": "Carlos"
+}
 
 ## Estructura del proyecto
 
